@@ -1,10 +1,10 @@
-const CACHE_NAME = 'persian-scheduler-v1';
+const CACHE_NAME = 'persian-scheduler-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
-  './style.css',
   './app.js',
-  './manifest.json'
+  './manifest.json',
+  'https://cdn.jsdelivr.net/npm/jalaali-js/dist/jalaali.min.js'
 ];
 
 // Install event: Cache all essential files
