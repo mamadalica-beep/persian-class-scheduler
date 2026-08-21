@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persian Class Scheduler</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2563eb">
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; background-color: #f3f4f6; margin: 0; padding: 20px; direction: rtl; }
+    .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); max-width: 500px; margin: auto; }
+    h1 { color: #1e293b; font-size: 1.25rem; }
+    button { background: #2563eb; color: white; border: none; padding: 10px 16px; border-radius: 8px; width: 100%; cursor: pointer; font-size: 1rem; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>برنامه‌ریزی کلاس‌ها (Persian Scheduler)</h1>
+    <p>برنامه با موفقیت آماده شد و به صورت آفلاین کار می‌کند.</p>
+    <button onclick="alert('App Ready!')">شروع برنامه</button>
+  </div>
+
+  <script>
+    // Register the offline Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js')
+        .then(() => console.log('Service Worker Registered Successfully'))
+        .catch(err => console.error('Service Worker Failed:', err));
+    }
+  </script>
+</body>
+</html>
